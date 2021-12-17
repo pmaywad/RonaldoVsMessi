@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>CSE 578 / Fall 2021 / Homework #5</title>
+    <link rel='stylesheet' href='css/style.css'>
+    <script src='https://d3js.org/d3.v5.min.js'></script>
+    <script src='script/homework5_2.js'></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body style="background-color: #f6f6f6;">
+    <div id = "title">
+      <h3>Homework #5: Argumentative Vis</h3>
+      <h4>Poonam Maywad - pmaywad@asu.edu - 1221540099</h4>
+    </div>
+    <div class="logo-images" style="background:url('images/barcelona.jpg') no-repeat,url('images/madrid.jpg') no-repeat !important; background-size: 4px 4px; background-position: 20% 20px,80% 20px !important; ">
+    <div id="wrapper-background" style="background:url('images/ronaldo.png') no-repeat,url('images/messi.png') no-repeat !important; background-size: 400px 300px, 400px, 300px !important; background-position: 100% 380px,0% 280px !important; ">
+    <div id='wrapper' >
+      <hr style='width:100%'>
+      <h1 style="text-align: center; font-family: Brush Script MT; font-size: 60px">
+        <span style="color:#C80534 ">Messi</span>
+        <span style="color: black">vs</span>
+        <span style="color: #0F076B ">Ronaldo</span>
+      </h1>
+
+
+      <h2>Who is the best player?</h2>
+      <h3>&nbsp;Source: &nbsp;
+      <a href='https://www.kaggle.com/sasakitetsuya/messi-vs-ronaldo-2009-to-2018/data' target='_blank'>Kaggle</a></h3>
+      <br/>
+      <p style="text-align:center; font-size: 15px;">Never in the history of football had been a rivalry like that of Leonel Messi and Christiano Ronaldo. Below are two charts depicting the performance of both the players for seasons from 2009 to 2018.</p>
+      <label style="margin-left:650px">Select a Metric</label>
+      <select id='metric-select', onchange="drawCharts()">
+        <!-- <option value='GPM'>Goals per Match</option> -->
+        <!-- <option value='Aps'>Appearances</option> -->
+        <option value='Goals'>Goals</option>
+        <option selected value="Asts">Assists</option>
+        <option value="APM">Assists per Match</option>
+      </select>
+      <br/>
+      <div style="display: flex; flex-direction: row;">
+      <div class="Messi">
+        <svg id="Liga_svg" ></svg>
+        <h2 style="color:#C80534 ">LA LIGA</h2>
+        <p style="margin-left: 50px;" >
+        Messi, playing for FC Barcelona, has more goals, assists and assists per match compared <br/>to Ronaldo in La Liga in more number of seasons.
+        <br/>
+        <br/>
+        <strong>Rhetoric Techniques used in the above visualization are:</strong>
+        <ul style="margin-left: 50px;">
+          <li> <strong>Omission:</strong> Filtering the data to only La Liga statistics for the players in this chart.</li>
+          <li><strong>Metonymy:</strong> Have selected the metrics where Messi's stats are more for more <br/>number of seasons in La Liga.</li>
+          <li><strong>Typographic mappings:</strong> Have assigned red color to Messi and Blue color to </br>Ronaldo. In addition to this coloring the bar between two points with the color of </br>highest scrorer.</li>
+        </ul>
+        </p>
+      </div>
+      <div class="Ronaldo">
+        <svg id="CL_svg"></svg>
+        <h2 style="color: #0F076B ">CHAMPIONS LEAGUE</h2>
+        <p>Where as Ronaldo has more goals, assists and assists per match compared to Messi in Champions League.<br/><br/>
+        <strong>Rhetoric Techniques used in the above visualization are:</strong>
+        <ul>
+          <li> <strong>Omission:</strong> Filtering the data to only show champions league statistics for the players in this chart.</li>
+          <li><strong>Metonymy:</strong> Have selected the metrics where Ronaldo's stats are more for more number of seasons in Champions League.</li>
+          <li><strong>Typographic mappings:</strong> Have assigned red color to Messi and Blue color to Ronaldo. In addition to this coloring the bar between two points with the color of highest scrorer.</li>
+        </ul>
+        </p>
+      </div>
+      <br />
+    </div>
+  </div>
+  </body>
+</html>
